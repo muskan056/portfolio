@@ -1,0 +1,247 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.container {
+  /* border: 2px solid black; */
+  max-width: 1300px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+nav li {
+  font-size: 20px;
+  border-bottom: 2px solid transparent;
+}
+nav li:hover {
+  border-bottom: 2px solid rgb(33, 89, 202);
+  transition: 0.3s ease-in;
+}
+header {
+  background: #0089b7;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.logo {
+  font-size: 25px;
+  color: white;
+  font-weight: 700;
+}
+.hero-image img {
+  width: 500px;
+  height: 500px;
+  border-radius: 300px;
+}
+.content {
+  display: flex;
+}
+#hero {
+  padding: 40px 0;
+  background: #003d62;
+  border-bottom: 4px solid #51000e;
+}
+#hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-content {
+  /* border: 2px solid black; */
+  display: grid;
+  place-items: center;
+  color: white;
+}
+
+#hero h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+.txt {
+  font-size: 60px;
+  color: yellow;
+}
+.txt-content {
+  font-size: 50px;
+}
+#hero h2 {
+  /* border: 2px solid black; */
+  font-size: 52px;
+  overflow: hidden;
+  border-right: 5px solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+#projects {
+  background: #003251;
+}
+#projects img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+}
+#projects h2 {
+  font-size: 60px;
+  text-align: center;
+  color: white;
+  padding: 20px 0;
+}
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 10px;
+}
+.grid-items {
+  display: grid;
+  place-items: center;
+}
+.card {
+  /* border: 3px solid green; */
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  /* border-radius: 20px; */
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: 1s ease-in-out;
+}
+.card:hover img {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+  opacity: 0.8;
+}
+.card:hover .card-content {
+  background: white;
+  color: #003d62;
+  transform: translateY(0px);
+}
+.card-content {
+  padding: 20px;
+  position: relative;
+  top: -65px;
+  margin-bottom: -65px;
+  transition: 0.5s ease-in-out;
+  transform: translateY(100px);
+}
+.card-content h3 {
+  /* color: white; */
+  font-weight: 700;
+  text-align: center;
+}
+/* contact */
+#contact {
+  background: #003d62;
+}
+#contact h2 {
+  font-size: 60px;
+  text-align: center;
+  margin: 20px 0;
+}
+#contact .container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  color: white;
+}
+.top-contact {
+  max-width: 800px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  /* gap: 30px; */
+}
+.contact-way {
+  /* margin-right: 10px; */
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.contact-way i {
+  font-size: 30px;
+}
+.contact-way h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.bottom-contact {
+  max-width: 400px;
+  gap: 10px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+}
+footer {
+  background: #003d62;
+  padding: 20px;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  html {
+    font-size: 40%;
+  }
+  #hero .container {
+    flex-direction: column;
+  }
+  .hero-image {
+    display: grid;
+    place-items: center;
+  }
+  #contact .container {
+    height: 70vh;
+  }
+}
+@media (max-width: 700px) {
+  html {
+    font-size: 32%;
+  }
+  #hero .container {
+    flex-direction: column;
+  }
+  .hero-image {
+    display: grid;
+    place-items: center;
+  }
+  #contact .container {
+    height: 50vh;
+  }
+}
